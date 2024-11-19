@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="salazzle" size="0.063000 0.087652" />
+    <ImageTarget name="salandit" size="0.063000 0.087652" />
+    <ImageTarget name="moltres" size="0.063000 0.087652" />
+    <ImageTarget name="kangaskhan" size="0.063000 0.087652" />
+    <ImageTarget name="flareon" size="0.063000 0.087652" />
+    <ImageTarget name="fire_energy" size="0.063000 0.087652" />
+    <ImageTarget name="eevee" size="0.063000 0.087652" />
+    <ImageTarget name="charmeleon" size="0.063000 0.087652" />
+    <ImageTarget name="charizard" size="0.063000 0.087652" />
+    <ImageTarget name="charmander" size="0.063000 0.087652" />
+  </Tracking>
+</QCARConfig>
