@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3b0206afdcb41784490cbd4851d3e002
+guid: 6a7f69d3114f4894db5da083c20e0ba9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1509525088455390036
-    second: charmander_0
+      213: -2458122808479892813
+    second: charmander 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,7 +73,7 @@ TextureImporter:
   - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 128
-    resizeAlgorithm: 1
+    resizeAlgorithm: 0
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: charmander_0
+      name: charmander 1_0
       rect:
         serializedVersion: 2
-        x: 29
+        x: 23
         y: 24
-        width: 40
-        height: 44
+        width: 42
+        height: 43
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cac831b0ee61d0be0800000000000000
-      internalID: -1509525088455390036
+      spriteID: 3ba3542545ef2edd0800000000000000
+      internalID: -2458122808479892813
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      charmander_0: -1509525088455390036
+      charmander 1_0: -2458122808479892813
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

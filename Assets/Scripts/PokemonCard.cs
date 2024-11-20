@@ -7,8 +7,9 @@ public class PokemonCard : MonoBehaviour
     public int HP;
     public int Energy;
     public TextMeshProUGUI HPField;
+    public TextMeshProUGUI EnergyField;
     public GameObject Hud;
-    public GameObject Camera;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -18,7 +19,7 @@ public class PokemonCard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        HPField.text = HP.ToString() ;
+       
     }
     public void showHud()
     {
