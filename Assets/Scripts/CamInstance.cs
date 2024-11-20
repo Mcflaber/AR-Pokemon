@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class Energy : PokemonCard
+public class CamInstance : MonoBehaviour
 {
-
+    public static CamInstance instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -14,5 +14,4 @@ public class Energy : PokemonCard
     {
         
     }
-
 }
