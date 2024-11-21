@@ -6,14 +6,15 @@ public class PokemonCard : MonoBehaviour
     
     public int HP;
     public int Energy;
+    public int AttackDamage;
     public TextMeshProUGUI HPField;
     public TextMeshProUGUI EnergyField;
     public GameObject Hud;
-
+    public GameObject HitBox;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
