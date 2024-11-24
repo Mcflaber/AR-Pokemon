@@ -10,11 +10,11 @@ public class PokemonCard : MonoBehaviour
     public TextMeshProUGUI HPField;
     public TextMeshProUGUI EnergyField;
     public GameObject Hud;
-    public GameObject HitBox;
+    public static PokemonCard Instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       
+       Instance = this;
     }
 
     // Update is called once per frame

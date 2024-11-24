@@ -13,8 +13,8 @@ public class BillBoard : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void LateUpdate()
     {
-        transform.LookAt(CamInstance.instance.transform.position, - Vector3.forward);
+        transform.forward = Camera.main.transform.forward;
     }
 }

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: a9e23c8f1ebbd794c916f02e833b24e0
+guid: d8f6ee218c291b148974ea8c0483f8f6
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1850302624278303789
-    second: charizard_0
+      213: -4470349382771016094
+    second: flareonFront_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -152,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: charizard_0
+      name: flareonFront_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 8
-        width: 86
-        height: 85
+        x: 21
+        y: 22
+        width: 57
+        height: 51
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -167,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d24d417fe689da910800000000000000
-      internalID: 1850302624278303789
+      spriteID: 26efb0adbe026f1c0800000000000000
+      internalID: -4470349382771016094
       vertices: []
       indices: 
       edges: []
@@ -187,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      charizard_0: 1850302624278303789
+      flareonFront_0: -4470349382771016094
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

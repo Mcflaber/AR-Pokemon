@@ -4,6 +4,8 @@ using UnityEngine;
 public class Charmander : PokemonCard
 {
     public BoxCollider BC;
+    public bool usingScratch = false;
+    public bool usingFlameTail = false;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,7 +25,7 @@ public class Charmander : PokemonCard
         AttackDamage = 10;
         if(Energy >= 1)
         {
-            //BC.SetActive(true);
+             
         }
 
     }
@@ -36,7 +38,12 @@ public class Charmander : PokemonCard
     }
     private void OnTriggerEnter(Collider other)
     {
-        
+        PokemonCard Card = other.gameObject.GetComponentInParent<PokemonCard>();
+        if(Card)
+        {
+
+        }    
+
     }
 
 
