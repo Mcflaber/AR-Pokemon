@@ -186,7 +186,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      kangaskhan_0: -4413292810332222135
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

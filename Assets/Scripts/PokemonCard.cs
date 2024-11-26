@@ -64,4 +64,8 @@ public class PokemonCard : MonoBehaviour
             isActiveCard = false;
         }
     }
+    public void takeDamage(int attack)
+    {
+        HP -= attack;
+    }
 }

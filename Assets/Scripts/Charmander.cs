@@ -29,8 +29,9 @@ public class Charmander : PokemonCard
         {
             Debug.Log("Scratch");
             anim.Play("Attack");
-            
-            usingScratch = true;
+
+           
+
         }
 
     }
@@ -44,9 +45,10 @@ public class Charmander : PokemonCard
     }
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log("Hit"); 
+        Debug.Log("Hit");
+
 
     }
-
+    
 
 }
