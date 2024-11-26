@@ -11,10 +11,12 @@ public class PokemonCard : MonoBehaviour
     public TextMeshProUGUI EnergyField;
     public GameObject Hud;
     public static PokemonCard Instance;
+    public bool isActiveCard;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
        Instance = this;
+        isActiveCard = false;
     }
 
     // Update is called once per frame
@@ -22,9 +24,21 @@ public class PokemonCard : MonoBehaviour
     {
        
     }
+    public void setActiveCard()
+    {
+        isActiveCard = true;
+    }
+    public void setInactiveCard()
+    {
+        isActiveCard = false;
+    }
     public void showHud()
     {
-        Hud.SetActive(true) ;
+        if(isActiveCard ==  true)
+        {
+            Hud.SetActive(true);
+        }
+        
     }
     public void hideHud()
     {
@@ -37,5 +51,16 @@ public class PokemonCard : MonoBehaviour
     public void removeEnergy()
     {
         Energy -= 1;
+        if(Energy < 0)
+        {
+            Energy = 0;
+        }
+    }
+    public void fainted()
+    {
+        if(HP <= 0)
+        {
+            isActiveCard = false;
+        }
     }
 }

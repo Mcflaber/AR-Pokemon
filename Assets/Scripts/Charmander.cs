@@ -3,15 +3,16 @@ using UnityEngine;
 
 public class Charmander : PokemonCard
 {
-    public BoxCollider BC;
+    public Animator anim;
     public bool usingScratch = false;
     public bool usingFlameTail = false;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         HP = 70;
         Energy = 0;
-        BC = GetComponent<BoxCollider>();
+        
     }
 
     // Update is called once per frame
@@ -25,12 +26,14 @@ public class Charmander : PokemonCard
         AttackDamage = 10;
         if(Energy >= 1)
         {
-             
+            anim.Play("Attack", 0, 0);
+            usingScratch = true;
         }
 
     }
     public void flameTail()
     {
+        AttackDamage = 20;
         if (Energy >= 2)
         {
 
@@ -41,7 +44,7 @@ public class Charmander : PokemonCard
         PokemonCard Card = other.gameObject.GetComponentInParent<PokemonCard>();
         if(Card)
         {
-
+            Debug.Log("Hit");
         }    
 
     }
