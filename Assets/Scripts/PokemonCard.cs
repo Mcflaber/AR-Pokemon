@@ -12,6 +12,7 @@ public class PokemonCard : MonoBehaviour
     public GameObject Hud;
     public static PokemonCard Instance;
     public bool isActiveCard;
+    public GameObject Cube;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {

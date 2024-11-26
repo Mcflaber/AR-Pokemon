@@ -12,7 +12,8 @@ public class Charmander : PokemonCard
     {
         HP = 70;
         Energy = 0;
-        
+        anim = gameObject.GetComponentInParent<Animator>();
+
     }
 
     // Update is called once per frame
@@ -26,7 +27,9 @@ public class Charmander : PokemonCard
         AttackDamage = 10;
         if(Energy >= 1)
         {
-            anim.Play("Attack", 0, 0);
+            Debug.Log("Scratch");
+            anim.Play("Attack");
+            
             usingScratch = true;
         }
 
@@ -41,11 +44,7 @@ public class Charmander : PokemonCard
     }
     private void OnTriggerEnter(Collider other)
     {
-        PokemonCard Card = other.gameObject.GetComponentInParent<PokemonCard>();
-        if(Card)
-        {
-            Debug.Log("Hit");
-        }    
+        Debug.Log("Hit"); 
 
     }
 

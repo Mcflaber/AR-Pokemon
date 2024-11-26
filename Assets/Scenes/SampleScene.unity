@@ -1147,7 +1147,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1545779601}
+  - {fileID: 1604764607}
   - {fileID: 883615510}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1169,6 +1169,8 @@ MonoBehaviour:
   HPField: {fileID: 791122008}
   EnergyField: {fileID: 858023481}
   Hud: {fileID: 883615509}
+  isActiveCard: 1
+  Cube: {fileID: 759818463}
   anim: {fileID: 1545779605}
   usingScratch: 0
   usingFlameTail: 0
@@ -3744,6 +3746,8 @@ MonoBehaviour:
   HPField: {fileID: 0}
   EnergyField: {fileID: 0}
   Hud: {fileID: 0}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &735123149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4145,6 +4149,114 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 752483509}
   m_CullTransparentMesh: 1
+--- !u!1 &759818463
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 759818464}
+  - component: {fileID: 759818467}
+  - component: {fileID: 759818466}
+  - component: {fileID: 759818465}
+  m_Layer: 0
+  m_Name: attackcube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &759818464
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759818463}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.0054, y: 0, z: 0.0659}
+  m_LocalScale: {x: 0.063, y: 0.063, z: 0.063}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1604764607}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &759818465
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759818463}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &759818466
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759818463}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RayTracingAccelStructBuildFlagsOverride: 0
+  m_RayTracingAccelStructBuildFlags: 1
+  m_SmallMeshCulling: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &759818467
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 759818463}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &765624156
 GameObject:
   m_ObjectHideFlags: 0
@@ -4694,15 +4806,15 @@ GameObject:
   - component: {fileID: 792713486}
   - component: {fileID: 792713485}
   - component: {fileID: 792713484}
-  - component: {fileID: 792713488}
   - component: {fileID: 792713487}
+  - component: {fileID: 792713488}
   m_Layer: 0
   m_Name: kangaskhan
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &792713484
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4809,6 +4921,8 @@ MonoBehaviour:
   HPField: {fileID: 1535068351}
   EnergyField: {fileID: 1721737364}
   Hud: {fileID: 943027745}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &792713488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5073,6 +5187,7 @@ GameObject:
   - component: {fileID: 808685471}
   - component: {fileID: 808685473}
   - component: {fileID: 808685472}
+  - component: {fileID: 808685474}
   m_Layer: 0
   m_Name: flareon_0
   m_TagString: Untagged
@@ -5163,6 +5278,27 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!65 &808685474
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 808685470}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.56, y: 0.49, z: 0.2}
+  m_Center: {x: 0, y: 0, z: -0.00000023841858}
 --- !u!1 &816366035
 GameObject:
   m_ObjectHideFlags: 0
@@ -6350,7 +6486,7 @@ AudioSource:
   m_audioClip: {fileID: 8300000, guid: 1c5645e02e98dcd45a717160359dcd80, type: 3}
   m_Resource: {fileID: 8300000, guid: 1c5645e02e98dcd45a717160359dcd80, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -6830,7 +6966,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 960776651}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 240913491}
+        m_TargetAssemblyTypeName: Charmander, Assembly-CSharp
+        m_MethodName: flameTail
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &960776651
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8060,15 +8208,15 @@ GameObject:
   - component: {fileID: 1077732243}
   - component: {fileID: 1077732242}
   - component: {fileID: 1077732241}
-  - component: {fileID: 1077732245}
   - component: {fileID: 1077732244}
+  - component: {fileID: 1077732245}
   m_Layer: 0
   m_Name: moltres
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1077732241
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8175,6 +8323,8 @@ MonoBehaviour:
   HPField: {fileID: 823274557}
   EnergyField: {fileID: 1077130969}
   Hud: {fileID: 257326606}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &1077732245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8613,15 +8763,15 @@ GameObject:
   - component: {fileID: 1179444335}
   - component: {fileID: 1179444334}
   - component: {fileID: 1179444333}
-  - component: {fileID: 1179444337}
   - component: {fileID: 1179444336}
+  - component: {fileID: 1179444337}
   m_Layer: 0
   m_Name: eevee
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1179444333
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8728,6 +8878,8 @@ MonoBehaviour:
   HPField: {fileID: 1583288105}
   EnergyField: {fileID: 685253967}
   Hud: {fileID: 1023437837}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &1179444337
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8892,15 +9044,15 @@ GameObject:
   - component: {fileID: 1226312455}
   - component: {fileID: 1226312454}
   - component: {fileID: 1226312453}
-  - component: {fileID: 1226312457}
   - component: {fileID: 1226312456}
+  - component: {fileID: 1226312457}
   m_Layer: 0
   m_Name: Charizard
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1226312453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9007,6 +9159,8 @@ MonoBehaviour:
   HPField: {fileID: 968526736}
   EnergyField: {fileID: 1938856888}
   Hud: {fileID: 1967716072}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &1226312457
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10730,11 +10884,11 @@ GameObject:
   m_Component:
   - component: {fileID: 1545779601}
   - component: {fileID: 1545779602}
-  - component: {fileID: 1545779603}
   - component: {fileID: 1545779604}
   - component: {fileID: 1545779605}
+  - component: {fileID: 1545779606}
   m_Layer: 0
-  m_Name: charmander 1_0
+  m_Name: Sprite
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10749,11 +10903,11 @@ Transform:
   m_GameObject: {fileID: 1545779600}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0165, z: 0.0226}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.063, y: 0.063, z: 0.063}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 240913490}
+  m_Father: {fileID: 1604764607}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1545779602
 SpriteRenderer:
@@ -10811,27 +10965,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!65 &1545779603
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545779600}
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 1
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 1.045341, y: 0.42999935, z: 0.57922906}
-  m_Center: {x: 0.0022704166, y: 0, z: 0.36602023}
 --- !u!114 &1545779604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10866,6 +10999,27 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!65 &1545779606
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1545779600}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.42, y: 0.43, z: 0.2}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1561987161
 GameObject:
   m_ObjectHideFlags: 0
@@ -10877,15 +11031,15 @@ GameObject:
   - component: {fileID: 1561987165}
   - component: {fileID: 1561987164}
   - component: {fileID: 1561987163}
-  - component: {fileID: 1561987167}
   - component: {fileID: 1561987166}
+  - component: {fileID: 1561987167}
   m_Layer: 0
   m_Name: salazzle_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1561987163
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10992,6 +11146,8 @@ MonoBehaviour:
   HPField: {fileID: 1939177589}
   EnergyField: {fileID: 1667483349}
   Hud: {fileID: 433263157}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &1561987167
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11283,6 +11439,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1584673488}
   m_CullTransparentMesh: 1
+--- !u!1 &1604764606
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1604764607}
+  m_Layer: 0
+  m_Name: CharmanderREP
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1604764607
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604764606}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.0165, z: 0.0226}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1545779601}
+  - {fileID: 759818464}
+  m_Father: {fileID: 240913490}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1625309665
 GameObject:
   m_ObjectHideFlags: 0
@@ -11395,15 +11584,15 @@ GameObject:
   - component: {fileID: 1634876538}
   - component: {fileID: 1634876537}
   - component: {fileID: 1634876536}
-  - component: {fileID: 1634876540}
   - component: {fileID: 1634876539}
+  - component: {fileID: 1634876540}
   m_Layer: 0
   m_Name: salandit_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1634876536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11510,6 +11699,8 @@ MonoBehaviour:
   HPField: {fileID: 1745380474}
   EnergyField: {fileID: 1948443423}
   Hud: {fileID: 1873337008}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &1634876540
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13279,7 +13470,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 0
+  StatusFilter: 1
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -13397,6 +13588,8 @@ MonoBehaviour:
   HPField: {fileID: 70139712}
   EnergyField: {fileID: 1046191895}
   Hud: {fileID: 816366035}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &1839932213
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15258,7 +15451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &2122066616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15271,7 +15464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 0
+  StatusFilter: 1
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -15389,6 +15582,8 @@ MonoBehaviour:
   HPField: {fileID: 29304549}
   EnergyField: {fileID: 437194930}
   Hud: {fileID: 362316889}
+  isActiveCard: 0
+  Cube: {fileID: 0}
 --- !u!114 &2122066620
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15747,7 +15942,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2138276950}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 240913491}
+        m_TargetAssemblyTypeName: Charmander, Assembly-CSharp
+        m_MethodName: scratch
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2138276950
 MonoBehaviour:
   m_ObjectHideFlags: 0
