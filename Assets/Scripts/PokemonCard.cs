@@ -29,7 +29,7 @@ public class PokemonCard : MonoBehaviour
     {
         isActiveCard = true;
     }
-    public void setInactiveCard()
+    public void setBenchedCard()
     {
         isActiveCard = false;
     }

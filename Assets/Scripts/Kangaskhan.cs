@@ -11,6 +11,7 @@ public class Kangaskhan : PokemonCard
     // Update is called once per frame
     void Update()
     {
-        
+        HPField.text = HP.ToString();
+        EnergyField.text = Energy.ToString();
     }
 }
