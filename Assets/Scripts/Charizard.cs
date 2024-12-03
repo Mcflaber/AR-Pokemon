@@ -7,6 +7,7 @@ public class Charizard : PokemonCard
     {
         HP = 160;
         Energy = 0;
+        isEvolved = true;
     }
 
     // Update is called once per frame
@@ -14,6 +15,14 @@ public class Charizard : PokemonCard
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
+        if (isActiveCard == false)
+        {
+            hideHud();
+        }
+        else
+        {
+            showHud();
+        }
     }
     public void AbilityResaluteFlame()
     {

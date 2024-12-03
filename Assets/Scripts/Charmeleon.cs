@@ -7,6 +7,7 @@ public class Charmeleon : PokemonCard
     {
         HP = 100;
         Energy = 0;
+        isEvolved = true;
     }
 
     // Update is called once per frame
@@ -14,6 +15,14 @@ public class Charmeleon : PokemonCard
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
+        if (isActiveCard == false)
+        {
+            hideHud();
+        }
+        else
+        {
+            showHud();
+        }
     }
     public void Slash()
     {

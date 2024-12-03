@@ -3,31 +3,46 @@ using UnityEngine;
 
 public class PokemonCard : MonoBehaviour
 {
-    
+
     public int HP;
     public int Energy;
     public int AttackDamage;
+    public int RequiredEnergyA1;
     public TextMeshProUGUI HPField;
     public TextMeshProUGUI EnergyField;
-    public GameObject Hud;
+    public GameObject AttackUI;
+    public GameObject ActivateUI;
     public static PokemonCard Instance;
+
     public bool isActiveCard;
-    public GameObject Cube;
+    public bool isEvolved;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-       Instance = this;
+        Instance = this;
         isActiveCard = false;
+
     }
 
     // Update is called once per frame
     void Update()
     {
-       
+
+    }
+
+
+    public void takeDamage(int attack)
+    {
+        HP -= attack;
     }
     public void setActiveCard()
     {
-        isActiveCard = true;
+
+        transform.gameObject.tag = "Active";
+        isActiveCard=true;
+        ActivateUI.SetActive(false);
+
     }
     public void setBenchedCard()
     {
@@ -35,15 +50,13 @@ public class PokemonCard : MonoBehaviour
     }
     public void showHud()
     {
-        if(isActiveCard ==  true)
-        {
-            Hud.SetActive(true);
-        }
-        
+        AttackUI.SetActive(true);
+
     }
     public void hideHud()
     {
-        Hud.SetActive(false);
+        AttackUI.SetActive(false);
+
     }
     public void addEnergy()
     {
@@ -52,20 +65,20 @@ public class PokemonCard : MonoBehaviour
     public void removeEnergy()
     {
         Energy -= 1;
-        if(Energy < 0)
+        if (Energy < 0)
         {
             Energy = 0;
         }
     }
     public void fainted()
     {
-        if(HP <= 0)
+        if (HP <= 0)
         {
             isActiveCard = false;
         }
     }
-    public void takeDamage(int attack)
+    public void do10Damage()
     {
-        HP -= attack;
+        AttackDamage = 10;
     }
 }

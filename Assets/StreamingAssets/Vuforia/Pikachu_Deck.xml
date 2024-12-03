@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<QCARConfig>
+  <Tracking>
+    <ImageTarget name="tauros" size="0.063000 0.088561" />
+    <ImageTarget name="ex_raichu" size="0.063000 0.088354" />
+    <ImageTarget name="chansey" size="0.063000 0.087689" />
+    <ImageTarget name="blitzle" size="0.063000 0.087689" />
+    <ImageTarget name="zebstrika" size="0.063000 0.089135" />
+    <ImageTarget name="electivire" size="0.063000 0.087415" />
+    <ImageTarget name="electabuzz" size="0.063000 0.087652" />
+    <ImageTarget name="raichu" size="0.063000 0.087652" />
+    <ImageTarget name="pikachu" size="0.063000 0.087652" />
+  </Tracking>
+</QCARConfig>

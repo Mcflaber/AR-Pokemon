@@ -11,6 +11,6 @@ public class CharizardDeck : GameManager
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

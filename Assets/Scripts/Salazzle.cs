@@ -5,7 +5,9 @@ public class Salazzle : PokemonCard
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        HP = 100;
+        Energy = 0;
+        isEvolved = true;
     }
 
     // Update is called once per frame
@@ -13,5 +15,13 @@ public class Salazzle : PokemonCard
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
+        if (isActiveCard == false)
+        {
+            hideHud();
+        }
+        else
+        {
+            showHud();
+        }
     }
 }

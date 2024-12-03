@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <QCARConfig>
   <Tracking>
+    <ImageTarget name="EXCharizard" size="0.063000 0.087652" />
     <ImageTarget name="salazzle" size="0.063000 0.087652" />
     <ImageTarget name="salandit" size="0.063000 0.087652" />
     <ImageTarget name="moltres" size="0.063000 0.087652" />
