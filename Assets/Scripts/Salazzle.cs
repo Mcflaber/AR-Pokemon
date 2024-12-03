@@ -8,6 +8,7 @@ public class Salazzle : PokemonCard
         HP = 100;
         Energy = 0;
         isEvolved = true;
+        isCharDeck = true;
     }
 
     // Update is called once per frame

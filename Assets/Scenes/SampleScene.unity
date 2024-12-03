@@ -412,6 +412,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 28253428}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &28253434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 28253425}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 28253428}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: EXCharizard
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 28253428}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &89032496
 GameObject:
   m_ObjectHideFlags: 0
@@ -739,6 +758,12 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 103655778}
   m_CullTransparentMesh: 1
+--- !u!1 &108835624 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1392238618837268077, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2916148064687562088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &113822052
 GameObject:
   m_ObjectHideFlags: 0
@@ -894,6 +919,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &124480909
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 124480902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 124480905}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: flareon
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 124480905}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &124480913
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4142,7 +4186,38 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &615667027
+--- !u!114 &615667028 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7360948649018597692, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+    type: 3}
+  m_PrefabInstance: {fileID: 2916148064687562088}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615667020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bc0685a8690270740886974e1df3cd59, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &615667031
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 615667020}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 615667023}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: charizard
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 615667023}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &615667032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4825,6 +4900,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  DamageTaken: 0
   Energy: 0
   AttackDamage: 0
   numberofActiveCards: 0
@@ -4836,6 +4912,8 @@ MonoBehaviour:
   isActiveCard: 0
   isActive2Card: 0
   isEvolved: 0
+  isPikaDeck: 0
+  isCharDeck: 0
 --- !u!114 &735123149
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6834,6 +6912,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 814208663}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &814208671
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814208660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 814208663}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: kangaskhan
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 814208663}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &826888586
 GameObject:
   m_ObjectHideFlags: 0
@@ -7853,7 +7950,6 @@ GameObject:
   - component: {fileID: 877569623}
   - component: {fileID: 877569622}
   - component: {fileID: 877569621}
-  - component: {fileID: 877569626}
   - component: {fileID: 877569627}
   m_Layer: 0
   m_Name: ARCamera
@@ -7962,18 +8058,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 75, y: 0, z: 0}
---- !u!114 &877569626
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 877569620}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3b60ff1ce55f0d945a6af25fdca72ae1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!82 &877569627
 AudioSource:
   m_ObjectHideFlags: 0
@@ -9535,6 +9619,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1071530312}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1071530320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071530309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1071530312}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: eevee
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 1071530312}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1086871196 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
@@ -9560,6 +9663,44 @@ Transform:
   m_PrefabInstance: {fileID: 8256356853957097932}
   m_PrefabAsset: {fileID: 0}
 --- !u!114 &1086871202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086871196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1086871199}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: charmander
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 1086871199}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &1086871203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1086871196}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1086871199}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: charmander
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 1086871199}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &1086871204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11499,6 +11640,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1297539963}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1297539971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297539960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1297539963}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: moltres
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 1297539963}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1363700542
 GameObject:
   m_ObjectHideFlags: 0
@@ -12640,6 +12800,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1540462127}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1540462135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540462124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1540462127}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: salandit
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 1540462127}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1549350818
 GameObject:
   m_ObjectHideFlags: 0
@@ -13735,6 +13914,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1665344336
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1665344329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1665344332}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: charmeleon
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 1665344332}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
+--- !u!114 &1665344340
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15111,6 +15309,25 @@ MonoBehaviour:
   mCastedBehaviour: {fileID: 1795834464}
   mMeshFilter: {fileID: 0}
   mMeshRenderer: {fileID: 0}
+--- !u!114 &1795834472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1795834461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mObserverBehaviour: {fileID: 1795834464}
+  mHiddenRoot: {fileID: 0}
+  mTargetName: salazzle
+  mDatasetName: Vuforia/Charizard_Deck.xml
+  mCastedBehaviour: {fileID: 1795834464}
+  mMeshFilter: {fileID: 0}
+  mMeshRenderer: {fileID: 0}
 --- !u!1 &1796669518
 GameObject:
   m_ObjectHideFlags: 0
@@ -15852,7 +16069,7 @@ GameObject:
   - component: {fileID: 1917188028}
   m_Layer: 0
   m_Name: Pikachu
-  m_TagString: Player
+  m_TagString: Active2
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -15959,6 +16176,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   HP: 0
+  DamageTaken: 0
   Energy: 0
   AttackDamage: 0
   numberofActiveCards: 0
@@ -15970,6 +16188,8 @@ MonoBehaviour:
   isActiveCard: 0
   isActive2Card: 0
   isEvolved: 0
+  isPikaDeck: 0
+  isCharDeck: 0
 --- !u!114 &1917188028
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16742,6 +16962,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1071530316}
+    - targetCorrespondingSourceObject: {fileID: 7763085392029220293, guid: 29813be5a95c45a42a4ae4b326f2e98b,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1071530320}
   m_SourcePrefab: {fileID: 100100000, guid: 29813be5a95c45a42a4ae4b326f2e98b, type: 3}
 --- !u!1001 &1649058382075573437
 PrefabInstance:
@@ -16840,6 +17064,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1540462131}
+    - targetCorrespondingSourceObject: {fileID: 1319152520719731530, guid: e3f70ac068d04054cbab4c08afda2e50,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1540462135}
   m_SourcePrefab: {fileID: 100100000, guid: e3f70ac068d04054cbab4c08afda2e50, type: 3}
 --- !u!1001 &1872538722644657858
 PrefabInstance:
@@ -16938,6 +17166,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1795834468}
+    - targetCorrespondingSourceObject: {fileID: 8520993350206632199, guid: b634d385510d0034d85dd6666fe5c47a,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1795834472}
   m_SourcePrefab: {fileID: 100100000, guid: b634d385510d0034d85dd6666fe5c47a, type: 3}
 --- !u!1001 &2417167748156742260
 PrefabInstance:
@@ -17126,6 +17358,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 28253430}
+    - targetCorrespondingSourceObject: {fileID: 3035400649383222751, guid: 581d94b421b89b94a8f5af736171a2f8,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 28253434}
   m_SourcePrefab: {fileID: 100100000, guid: 581d94b421b89b94a8f5af736171a2f8, type: 3}
 --- !u!1001 &2916148064687562088
 PrefabInstance:
@@ -17139,11 +17375,86 @@ PrefabInstance:
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 240913491}
+      objectReference: {fileID: 615667028}
+    - target: {fileID: 1212227331981413956, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: addEnergy
+      objectReference: {fileID: 0}
     - target: {fileID: 1392238618837268077, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357183095907820480, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357183095907820480, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357183095907820480, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 615667028}
+    - target: {fileID: 3357183095907820480, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357183095907820480, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: AbilityResaluteFlame
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357183095907820480, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Charizard, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3357183095907820480, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441258022856674520, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441258022856674520, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441258022856674520, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 615667028}
+    - target: {fileID: 3441258022856674520, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441258022856674520, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: FieryBlast
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441258022856674520, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Charizard, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 3441258022856674520, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 5427075504850726119, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
@@ -17213,13 +17524,33 @@ PrefabInstance:
     - target: {fileID: 7295887600459863275, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360948649018597692, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: AttackUI
+      value: 
+      objectReference: {fileID: 108835624}
+    - target: {fileID: 7360948649018597692, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: isCharDeck
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360948649018597692, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: isActiveCard
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7647173821324893415, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 240913491}
+      objectReference: {fileID: 615667028}
+    - target: {fileID: 7647173821324893415, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: removeEnergy
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5203785786740563107, guid: 440423d9f67ca6641b019f8f9c0c64f9, type: 3}
     m_RemovedGameObjects: []
@@ -17228,7 +17559,11 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7295887600459863275, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 615667027}
+      addedObject: {fileID: 615667032}
+    - targetCorrespondingSourceObject: {fileID: 7295887600459863275, guid: 440423d9f67ca6641b019f8f9c0c64f9,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 615667031}
   m_SourcePrefab: {fileID: 100100000, guid: 440423d9f67ca6641b019f8f9c0c64f9, type: 3}
 --- !u!1001 &3040267658454874998
 PrefabInstance:
@@ -17327,6 +17662,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1297539967}
+    - targetCorrespondingSourceObject: {fileID: 5248126819455811732, guid: a9803a556833ce541aa348a31bd901f2,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1297539971}
   m_SourcePrefab: {fileID: 100100000, guid: a9803a556833ce541aa348a31bd901f2, type: 3}
 --- !u!1001 &5701373185369058363
 PrefabInstance:
@@ -17450,6 +17789,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 124480909}
+    - targetCorrespondingSourceObject: {fileID: 3026428546572407704, guid: 602da114b62427240b6c35ae16eaec29,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 124480913}
   m_SourcePrefab: {fileID: 100100000, guid: 602da114b62427240b6c35ae16eaec29, type: 3}
 --- !u!1001 &6620252593740146837
 PrefabInstance:
@@ -17548,6 +17891,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 1665344336}
+    - targetCorrespondingSourceObject: {fileID: 6340852359610937578, guid: 3241bbf5e1dcce948b1cbb7ec577dbae,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1665344340}
   m_SourcePrefab: {fileID: 100100000, guid: 3241bbf5e1dcce948b1cbb7ec577dbae, type: 3}
 --- !u!1001 &8256356853957097932
 PrefabInstance:
@@ -17565,7 +17912,7 @@ PrefabInstance:
     - target: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 387172876914118408, guid: b2b86d47e45f7dc4888a01900a3c53ec,
         type: 3}
@@ -17724,6 +18071,14 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
         type: 3}
       insertIndex: -1
+      addedObject: {fileID: 1086871204}
+    - targetCorrespondingSourceObject: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1086871203}
+    - targetCorrespondingSourceObject: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
+        type: 3}
+      insertIndex: -1
       addedObject: {fileID: 1086871202}
   m_SourcePrefab: {fileID: 100100000, guid: b2b86d47e45f7dc4888a01900a3c53ec, type: 3}
 --- !u!1001 &8359270404326261060
@@ -17823,6 +18178,10 @@ PrefabInstance:
         type: 3}
       insertIndex: -1
       addedObject: {fileID: 814208667}
+    - targetCorrespondingSourceObject: {fileID: 6101880028867312353, guid: 9e49de5d4e5c0914db9753232a2eb96d,
+        type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 814208671}
   m_SourcePrefab: {fileID: 100100000, guid: 9e49de5d4e5c0914db9753232a2eb96d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -8,6 +8,7 @@ public class Eevee : PokemonCard
         HP = 60;
         Energy = 0;
         isEvolved = false;
+        isCharDeck = true;
     }
 
     // Update is called once per frame

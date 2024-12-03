@@ -9,8 +9,8 @@ public class Charmander : PokemonCard
     {
         HP = 70;
         Energy = 0;
+        isCharDeck = true;
 
-      
     }
 
     // Update is called once per frame
@@ -19,7 +19,7 @@ public class Charmander : PokemonCard
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
 
-        if(isActiveCard == false)
+        if (isActiveCard == false)
         {
             hideHud();
         }
@@ -32,15 +32,15 @@ public class Charmander : PokemonCard
     }
     public void scratch()
     {
-        
-        if(Energy >= 1)
+
+        if (Energy >= 1)
         {
             PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if(pc != null)
+            if (pc != null)
             {
                 pc.takeDamage(10);
             }
-            
+
 
         }
 

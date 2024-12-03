@@ -8,6 +8,7 @@ public class Salandit : PokemonCard
         HP = 70;
         Energy = 0;
         isEvolved = false;
+        isCharDeck = true;
     }
 
     // Update is called once per frame

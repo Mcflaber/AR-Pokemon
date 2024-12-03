@@ -4,7 +4,8 @@ using UnityEngine;
 public class PokemonCard : MonoBehaviour
 {
 
-    public int HP;
+    public int HP = 0;
+    public int DamageTaken = 0; 
     public int Energy;
     public int AttackDamage;
     public int numberofActiveCards;
@@ -12,16 +13,16 @@ public class PokemonCard : MonoBehaviour
     public TextMeshProUGUI EnergyField;
     public GameObject AttackUI;
     public GameObject ActivateUI;
-    public static PokemonCard Instance;
     public GameObject Target;
     public bool isActiveCard;
     public bool isActive2Card;
     public bool isEvolved;
+    public bool isPikaDeck;
+    public bool isCharDeck;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        Instance = this;
         isActiveCard = false;
 
     }
@@ -29,30 +30,42 @@ public class PokemonCard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
 
     public void takeDamage(int attack)
     {
         HP -= attack;
+        DamageTaken += attack;
+        if(HP <= 0)
+        {
+            fainted();
+        }
     }
     public void setActiveCard()
     {
-        if(numberofActiveCards == 0 )
+        if(isCharDeck == true)
         {
             transform.gameObject.tag = "Active";
             isActiveCard = true;
             ActivateUI.SetActive(false);
+
+            //Example with a manager... 
+            // Team number : 1 = CharDeck, 2 = PikaDeck
+            // 'this' slots in to paramater of PokemonCard
+            //BattleManager.instance.MakeCardActive(TeamNumber, this);
         }
-        else if ( numberofActiveCards == 1 )
+        if(isPikaDeck == true)
         {
             transform.gameObject.tag = "Active2";
             isActiveCard = true;
             ActivateUI.SetActive(false);
         }
+        
 
     }
+
     public void setBenchedCard()
     {
         isActiveCard = false;
@@ -81,10 +94,14 @@ public class PokemonCard : MonoBehaviour
     }
     public void fainted()
     {
-        if (HP <= 0)
+        if(HP <= 0)
         {
             isActiveCard = false;
+            
+            HP = 0;
         }
+            
+        
     }
 
 }

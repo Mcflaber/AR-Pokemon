@@ -8,6 +8,7 @@ public class Flareon : PokemonCard
         HP = 110;
         Energy = 0;
         isEvolved = true;
+        isCharDeck = true;
     }
 
     // Update is called once per frame
@@ -23,5 +24,7 @@ public class Flareon : PokemonCard
         {
             showHud();
         }
+        Target = GameObject.FindGameObjectWithTag("Active2");
+        fainted();
     }
 }

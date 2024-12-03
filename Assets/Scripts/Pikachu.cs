@@ -23,6 +23,7 @@ public class Pikachu : PokemonCard
             showHud();
         }
         Target = GameObject.FindGameObjectWithTag("Active");
+        fainted();
     }
     public void quickAttack()
     {

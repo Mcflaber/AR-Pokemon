@@ -8,6 +8,7 @@ public class Moltres : PokemonCard
         HP = 120;
         Energy = 0;
         isEvolved = false;
+        isCharDeck = true;
     }
 
     // Update is called once per frame
