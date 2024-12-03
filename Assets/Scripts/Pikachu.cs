@@ -22,7 +22,34 @@ public class Pikachu : PokemonCard
         {
             showHud();
         }
+        Target = GameObject.FindGameObjectWithTag("Active");
     }
-  
-    
+    public void quickAttack()
+    {
+
+        if (Energy >= 1)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(10);
+            }
+
+
+        }
+
+    }
+    public void electroBall()
+    {
+        AttackDamage = 20;
+        if (Energy >= 3)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(20);
+            }
+        }
+    }
+
 }

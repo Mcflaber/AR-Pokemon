@@ -7,14 +7,15 @@ public class PokemonCard : MonoBehaviour
     public int HP;
     public int Energy;
     public int AttackDamage;
-    public int RequiredEnergyA1;
+    public int numberofActiveCards;
     public TextMeshProUGUI HPField;
     public TextMeshProUGUI EnergyField;
     public GameObject AttackUI;
     public GameObject ActivateUI;
     public static PokemonCard Instance;
-
+    public GameObject Target;
     public bool isActiveCard;
+    public bool isActive2Card;
     public bool isEvolved;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -28,7 +29,7 @@ public class PokemonCard : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        
     }
 
 
@@ -38,10 +39,18 @@ public class PokemonCard : MonoBehaviour
     }
     public void setActiveCard()
     {
-
-        transform.gameObject.tag = "Active";
-        isActiveCard=true;
-        ActivateUI.SetActive(false);
+        if(numberofActiveCards == 0 )
+        {
+            transform.gameObject.tag = "Active";
+            isActiveCard = true;
+            ActivateUI.SetActive(false);
+        }
+        else if ( numberofActiveCards == 1 )
+        {
+            transform.gameObject.tag = "Active2";
+            isActiveCard = true;
+            ActivateUI.SetActive(false);
+        }
 
     }
     public void setBenchedCard()
@@ -77,8 +86,5 @@ public class PokemonCard : MonoBehaviour
             isActiveCard = false;
         }
     }
-    public void do10Damage()
-    {
-        AttackDamage = 10;
-    }
+
 }
