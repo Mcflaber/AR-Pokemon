@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Flareon : PokemonCard
+public class Flareon : Eevee
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -26,5 +26,32 @@ public class Flareon : PokemonCard
         }
         Target = GameObject.FindGameObjectWithTag("Active2");
         fainted();
+    }
+    public void Bite()
+    {
+
+        if (Energy >= 1)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(20);
+            }
+
+
+        }
+
+    }
+    public void flameTail()
+    {
+        AttackDamage = 20;
+        if (Energy >= 2)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(130);
+            }
+        }
     }
 }

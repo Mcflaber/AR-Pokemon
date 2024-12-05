@@ -25,4 +25,26 @@ public class Salandit : PokemonCard
             showHud();
         }
     }
+    public void liveCoal()
+    {
+        if (Energy >= 1)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(10);
+            }
+        }
+    }
+    public void Combustion()
+    {
+        if (Energy >= 2)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(30);
+            }
+        }
+    }
 }

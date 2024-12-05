@@ -1,12 +1,11 @@
 using UnityEngine;
 
-public class Charmeleon : Charmander
+public class EXcharizard : Charmeleon
 {
-    public GameObject basic;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        HP = 100 - DamageTaken;
+        HP = 160;
         Energy = 0;
         isEvolved = true;
         isCharDeck = true;
@@ -27,31 +26,30 @@ public class Charmeleon : Charmander
         }
         Target = GameObject.FindGameObjectWithTag("Active2");
         fainted();
-        gameObject.tag = basic.tag;
     }
-    public void Slash()
+    public void Flamethrower()
     {
-        if (Energy >= 1)
+        if (Energy >= 4)
         {
             PokemonCard pc = Target.GetComponent<PokemonCard>();
             if (pc != null)
             {
-                pc.takeDamage(30);
+                pc.takeDamage(140);
             }
 
 
         }
     }
-    public void flameThrower()
+    public void FieryBlast()
     {
         if (Energy >= 3)
         {
             PokemonCard pc = Target.GetComponent<PokemonCard>();
             if (pc != null)
             {
-                pc.takeDamage(80);
+                pc.takeDamage(300);
             }
-
+            Energy--;
 
         }
     }

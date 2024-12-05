@@ -1,24 +1,25 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class PokemonCard : MonoBehaviour
+public class PokemonCard : BattleManager
 {
 
     public int HP = 0;
     public int DamageTaken = 0; 
-    public int Energy;
-    public int AttackDamage;
-    public int numberofActiveCards;
+    public int Energy = 0;
+    public int AttackDamage = 0;
+    public int numberofActiveCards = 0;
     public TextMeshProUGUI HPField;
     public TextMeshProUGUI EnergyField;
     public GameObject AttackUI;
     public GameObject ActivateUI;
     public GameObject Target;
-    public bool isActiveCard;
-    public bool isActive2Card;
-    public bool isEvolved;
-    public bool isPikaDeck;
-    public bool isCharDeck;
+    public bool isActiveCard = false;
+    public bool isActive2Card = false;
+    public bool isEvolved = false;
+    public bool isPikaDeck = false;
+    public bool isCharDeck = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -43,7 +44,13 @@ public class PokemonCard : MonoBehaviour
             fainted();
         }
     }
-    public void setActiveCard()
+    public void healDamage()
+    {
+        HP += 30;
+        DamageTaken -= 30;
+        
+    }
+    public void setActiveCard(int teamNumber)
     {
         if(isCharDeck == true)
         {
@@ -65,9 +72,16 @@ public class PokemonCard : MonoBehaviour
         
 
     }
-
+    public void makeActive()
+    {
+        BattleManager.instance.p1ActiveCard = gameObject;
+    }
     public void setBenchedCard()
     {
+        if(p1ActiveCard != null && p2ActiveCard != null)
+        {
+            isActiveCard = false;
+        }
         isActiveCard = false;
     }
     public void showHud()

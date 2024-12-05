@@ -5,7 +5,7 @@ public class Charizard : PokemonCard
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        HP = 160;
+        HP = 160 - DamageTaken;
         Energy = 0;
         isEvolved = true;
         isCharDeck = true;

@@ -25,4 +25,20 @@ public class Eevee : PokemonCard
             showHud();
         }
     }
+    public void Gnaw()
+    {
+
+        if (Energy >= 1)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(20);
+            }
+
+
+        }
+
+    }
+
 }

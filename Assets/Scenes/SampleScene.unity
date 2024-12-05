@@ -393,26 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &28253430
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28253425}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 28253428}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: EXCharizard
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 28253428}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &28253434
+--- !u!114 &28253438
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -918,26 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &124480909
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 124480902}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 124480905}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: flareon
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 124480905}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &124480913
+--- !u!114 &124480917
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2072,7 +2034,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -2470,7 +2432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -3557,6 +3519,54 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 503690974}
   m_CullTransparentMesh: 1
+--- !u!1 &554034162
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 554034164}
+  - component: {fileID: 554034163}
+  m_Layer: 0
+  m_Name: GameManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &554034163
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554034162}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 164cde5611a7a1d4dbdff61c20c70ddc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  p1ActiveCard: {fileID: 0}
+  p2ActiveCard: {fileID: 0}
+  p1Benched: []
+  p2Benched: []
+--- !u!4 &554034164
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 554034162}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 3.1426923, y: -5.947221, z: 18.684942}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &561038678
 GameObject:
   m_ObjectHideFlags: 0
@@ -3831,7 +3841,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -4199,25 +4209,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &615667031
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 615667020}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 615667023}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: charizard
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 615667023}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &615667032
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4899,6 +4890,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3c61895e82013429779ef95b6cc7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p1ActiveCard: {fileID: 0}
+  p2ActiveCard: {fileID: 0}
+  p1Benched:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  p2Benched:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   HP: 0
   DamageTaken: 0
   Energy: 0
@@ -6416,7 +6421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -6893,26 +6898,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &814208667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 814208660}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 814208663}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: kangaskhan
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 814208663}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &814208671
+--- !u!114 &814208675
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -7340,7 +7326,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -7735,7 +7721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -9225,7 +9211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -9351,7 +9337,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -9600,26 +9586,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1071530316
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1071530309}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1071530312}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: eevee
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 1071530312}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &1071530320
+--- !u!114 &1071530324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9662,45 +9629,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8256356853957097932}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1086871202
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086871196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1086871199}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: charmander
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 1086871199}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &1086871203
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1086871196}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1086871199}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: charmander
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 1086871199}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &1086871204
+--- !u!114 &1086871206
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11621,26 +11550,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1297539967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1297539960}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1297539963}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: moltres
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 1297539963}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &1297539971
+--- !u!114 &1297539975
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12781,26 +12691,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1540462131
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1540462124}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1540462127}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: salandit
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 1540462127}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &1540462135
+--- !u!114 &1540462139
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13913,26 +13804,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1665344336
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1665344329}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1665344332}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: charmeleon
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 1665344332}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &1665344340
+--- !u!114 &1665344344
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -15087,8 +14959,8 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 240913491}
-        m_TargetAssemblyTypeName: PokemonCard, Assembly-CSharp
-        m_MethodName: setActiveCard
+        m_TargetAssemblyTypeName: Charmander, Assembly-CSharp
+        m_MethodName: makeActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -15290,26 +15162,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1795834468
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1795834461}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1778676317, guid: 8a9a760f95896c34689febc965510927, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  mObserverBehaviour: {fileID: 1795834464}
-  mHiddenRoot: {fileID: 0}
-  mTargetName: salazzle
-  mDatasetName: Vuforia/Charizard_Deck.xml
-  mCastedBehaviour: {fileID: 1795834464}
-  mMeshFilter: {fileID: 0}
-  mMeshRenderer: {fileID: 0}
---- !u!114 &1795834472
+--- !u!114 &1795834476
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -16073,7 +15926,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1917188024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16086,7 +15939,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 886328de6a5c14cbb85854fdf1a5085b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StatusFilter: 1
+  StatusFilter: 0
   UsePoseSmoothing: 0
   AnimationCurve:
     serializedVersion: 2
@@ -16175,6 +16028,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cb0420a7f7716439771b1392724410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  p1ActiveCard: {fileID: 0}
+  p2ActiveCard: {fileID: 0}
+  p1Benched:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  p2Benched:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
   HP: 0
   DamageTaken: 0
   Energy: 0
@@ -16961,11 +16828,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7763085392029220293, guid: 29813be5a95c45a42a4ae4b326f2e98b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1071530316}
-    - targetCorrespondingSourceObject: {fileID: 7763085392029220293, guid: 29813be5a95c45a42a4ae4b326f2e98b,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1071530320}
+      addedObject: {fileID: 1071530324}
   m_SourcePrefab: {fileID: 100100000, guid: 29813be5a95c45a42a4ae4b326f2e98b, type: 3}
 --- !u!1001 &1649058382075573437
 PrefabInstance:
@@ -17063,11 +16926,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1319152520719731530, guid: e3f70ac068d04054cbab4c08afda2e50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1540462131}
-    - targetCorrespondingSourceObject: {fileID: 1319152520719731530, guid: e3f70ac068d04054cbab4c08afda2e50,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1540462135}
+      addedObject: {fileID: 1540462139}
   m_SourcePrefab: {fileID: 100100000, guid: e3f70ac068d04054cbab4c08afda2e50, type: 3}
 --- !u!1001 &1872538722644657858
 PrefabInstance:
@@ -17165,11 +17024,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 8520993350206632199, guid: b634d385510d0034d85dd6666fe5c47a,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1795834468}
-    - targetCorrespondingSourceObject: {fileID: 8520993350206632199, guid: b634d385510d0034d85dd6666fe5c47a,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1795834472}
+      addedObject: {fileID: 1795834476}
   m_SourcePrefab: {fileID: 100100000, guid: b634d385510d0034d85dd6666fe5c47a, type: 3}
 --- !u!1001 &2417167748156742260
 PrefabInstance:
@@ -17357,11 +17212,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3035400649383222751, guid: 581d94b421b89b94a8f5af736171a2f8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 28253430}
-    - targetCorrespondingSourceObject: {fileID: 3035400649383222751, guid: 581d94b421b89b94a8f5af736171a2f8,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 28253434}
+      addedObject: {fileID: 28253438}
   m_SourcePrefab: {fileID: 100100000, guid: 581d94b421b89b94a8f5af736171a2f8, type: 3}
 --- !u!1001 &2916148064687562088
 PrefabInstance:
@@ -17524,7 +17375,7 @@ PrefabInstance:
     - target: {fileID: 7295887600459863275, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7360948649018597692, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
@@ -17556,10 +17407,6 @@ PrefabInstance:
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 7295887600459863275, guid: 440423d9f67ca6641b019f8f9c0c64f9,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 615667032}
     - targetCorrespondingSourceObject: {fileID: 7295887600459863275, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
       insertIndex: -1
@@ -17661,11 +17508,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5248126819455811732, guid: a9803a556833ce541aa348a31bd901f2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1297539967}
-    - targetCorrespondingSourceObject: {fileID: 5248126819455811732, guid: a9803a556833ce541aa348a31bd901f2,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1297539971}
+      addedObject: {fileID: 1297539975}
   m_SourcePrefab: {fileID: 100100000, guid: a9803a556833ce541aa348a31bd901f2, type: 3}
 --- !u!1001 &5701373185369058363
 PrefabInstance:
@@ -17788,11 +17631,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3026428546572407704, guid: 602da114b62427240b6c35ae16eaec29,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 124480909}
-    - targetCorrespondingSourceObject: {fileID: 3026428546572407704, guid: 602da114b62427240b6c35ae16eaec29,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 124480913}
+      addedObject: {fileID: 124480917}
   m_SourcePrefab: {fileID: 100100000, guid: 602da114b62427240b6c35ae16eaec29, type: 3}
 --- !u!1001 &6620252593740146837
 PrefabInstance:
@@ -17890,11 +17729,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6340852359610937578, guid: 3241bbf5e1dcce948b1cbb7ec577dbae,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1665344336}
-    - targetCorrespondingSourceObject: {fileID: 6340852359610937578, guid: 3241bbf5e1dcce948b1cbb7ec577dbae,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1665344340}
+      addedObject: {fileID: 1665344344}
   m_SourcePrefab: {fileID: 100100000, guid: 3241bbf5e1dcce948b1cbb7ec577dbae, type: 3}
 --- !u!1001 &8256356853957097932
 PrefabInstance:
@@ -17912,7 +17747,7 @@ PrefabInstance:
     - target: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 387172876914118408, guid: b2b86d47e45f7dc4888a01900a3c53ec,
         type: 3}
@@ -18071,15 +17906,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1086871204}
-    - targetCorrespondingSourceObject: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1086871203}
-    - targetCorrespondingSourceObject: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1086871202}
+      addedObject: {fileID: 1086871206}
   m_SourcePrefab: {fileID: 100100000, guid: b2b86d47e45f7dc4888a01900a3c53ec, type: 3}
 --- !u!1001 &8359270404326261060
 PrefabInstance:
@@ -18177,11 +18004,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6101880028867312353, guid: 9e49de5d4e5c0914db9753232a2eb96d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 814208667}
-    - targetCorrespondingSourceObject: {fileID: 6101880028867312353, guid: 9e49de5d4e5c0914db9753232a2eb96d,
-        type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 814208671}
+      addedObject: {fileID: 814208675}
   m_SourcePrefab: {fileID: 100100000, guid: 9e49de5d4e5c0914db9753232a2eb96d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
@@ -18210,3 +18033,4 @@ SceneRoots:
   - {fileID: 337698040}
   - {fileID: 436426051}
   - {fileID: 582325038}
+  - {fileID: 554034164}

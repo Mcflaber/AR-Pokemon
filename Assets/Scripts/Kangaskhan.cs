@@ -25,4 +25,42 @@ public class Kangaskhan : PokemonCard
             showHud();
         }
     }
+    public void Fetch()
+    {
+
+        if (Energy >= 1)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(10);
+            }
+
+
+        }
+
+    }
+    public void Headbutt()
+    {
+        AttackDamage = 20;
+        if (Energy >= 2)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(20);
+            }
+        }
+    }
+    public void oneTwoPunch()
+    {
+        if(Energy >=3)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(60);
+            }
+        }
+    }
 }

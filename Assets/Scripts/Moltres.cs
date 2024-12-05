@@ -25,4 +25,31 @@ public class Moltres : PokemonCard
             showHud();
         }
     }
+    public void AssistingHeater()
+    {
+
+        if (Energy >= 1)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(30);
+            }
+
+
+        }
+
+    }
+    public void flameTail()
+    {
+        AttackDamage = 20;
+        if (Energy >= 3)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(90);
+            }
+        }
+    }
 }

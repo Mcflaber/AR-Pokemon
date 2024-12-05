@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Salazzle : PokemonCard
+public class Salazzle : Salandit
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,4 +25,20 @@ public class Salazzle : PokemonCard
             showHud();
         }
     }
+    public void FireClaws()
+    {
+
+        if (Energy >= 2)
+        {
+            PokemonCard pc = Target.GetComponent<PokemonCard>();
+            if (pc != null)
+            {
+                pc.takeDamage(70);
+            }
+
+
+        }
+
+    }
+
 }
