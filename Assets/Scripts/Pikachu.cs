@@ -7,6 +7,7 @@ public class Pikachu : PokemonCard
     {
         HP = 70;
         Energy = 0;
+        isPikaDeck = true;
     }
 
     // Update is called once per frame
@@ -25,31 +26,19 @@ public class Pikachu : PokemonCard
         Target = GameObject.FindGameObjectWithTag("Active");
         fainted();
     }
+
     public void quickAttack()
     {
-
         if (Energy >= 1)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(10);
-            }
-
-
+            BattleManager.instance.doDamagetoP1(10);
         }
-
     }
     public void electroBall()
     {
-        AttackDamage = 20;
         if (Energy >= 3)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(20);
-            }
+            BattleManager.instance.doDamagetoP1(60);
         }
     }
 

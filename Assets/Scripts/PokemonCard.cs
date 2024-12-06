@@ -2,7 +2,7 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public class PokemonCard : BattleManager
+public class PokemonCard : MonoBehaviour
 {
 
     public int HP = 0;
@@ -50,7 +50,7 @@ public class PokemonCard : BattleManager
         DamageTaken -= 30;
         
     }
-    public void setActiveCard(int teamNumber)
+    public void setActiveCard()
     {
         if(isCharDeck == true)
         {
@@ -74,15 +74,26 @@ public class PokemonCard : BattleManager
     }
     public void makeActive()
     {
-        BattleManager.instance.p1ActiveCard = gameObject;
+        if(isCharDeck == true && isPikaDeck == false)
+        {
+            BattleManager.instance.p1ActiveCard = gameObject;
+            isActiveCard = true;
+            ActivateUI.SetActive(false);
+        }
+        if (isPikaDeck == true && isCharDeck == false) 
+        {
+            BattleManager.instance.p2ActiveCard = gameObject;
+            isActiveCard = true;
+            ActivateUI.SetActive(false);
+        }
+        if(BattleManager.instance.p1ActiveCard != null)
+        {
+            Debug.Log("full");
+        }
     }
     public void setBenchedCard()
     {
-        if(p1ActiveCard != null && p2ActiveCard != null)
-        {
-            isActiveCard = false;
-        }
-        isActiveCard = false;
+       //BattleManager.instance.p1Benched = ;
     }
     public void showHud()
     {

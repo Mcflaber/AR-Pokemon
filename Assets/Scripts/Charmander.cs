@@ -57,5 +57,11 @@ public class Charmander : PokemonCard
             }
         }
     }
-    
+    public void tempAttack()
+    {
+        if (Energy >= 1)
+        {
+            BattleManager.instance.doDamagetoP1(10);
+        }
+    }
 }
