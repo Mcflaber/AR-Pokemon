@@ -30,11 +30,7 @@ public class Kangaskhan : PokemonCard
 
         if (Energy >= 1)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(10);
-            }
+
 
 
         }
@@ -45,22 +41,14 @@ public class Kangaskhan : PokemonCard
         AttackDamage = 20;
         if (Energy >= 2)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(20);
-            }
+            BattleManager.instance.doDamage(30, 1);
         }
     }
     public void oneTwoPunch()
     {
         if(Energy >=3)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(60);
-            }
+            BattleManager.instance.doDamage(60, 1);
         }
     }
 }

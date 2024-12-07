@@ -24,19 +24,14 @@ public class Charizard : PokemonCard
         {
             showHud();
         }
-        Target = GameObject.FindGameObjectWithTag("Active2");
+
         fainted();
     }
     public void AbilityResaluteFlame()
     {
         if (Energy >= 0)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                
-            }
-
+            BattleManager.instance.doDamage(0, 1);
 
         }
     }
@@ -44,12 +39,7 @@ public class Charizard : PokemonCard
     {
         if (Energy >= 3)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(130);
-            }
-            Energy--;
+            BattleManager.instance.doDamage(130, 1);
 
         }
     }

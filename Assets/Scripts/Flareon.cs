@@ -24,7 +24,6 @@ public class Flareon : Eevee
         {
             showHud();
         }
-        Target = GameObject.FindGameObjectWithTag("Active2");
         fainted();
     }
     public void Bite()
@@ -32,26 +31,19 @@ public class Flareon : Eevee
 
         if (Energy >= 1)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(20);
-            }
+            BattleManager.instance.doDamage(20, 1);
 
 
         }
 
     }
-    public void flameTail()
+    public void FireSpin()
     {
         AttackDamage = 20;
-        if (Energy >= 2)
+        if (Energy >= 3)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(130);
-            }
+            BattleManager.instance.doDamage(130, 1);
+            Energy -= 2;
         }
     }
 }

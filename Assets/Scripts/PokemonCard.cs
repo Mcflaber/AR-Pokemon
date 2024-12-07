@@ -14,9 +14,7 @@ public class PokemonCard : MonoBehaviour
     public TextMeshProUGUI EnergyField;
     public GameObject AttackUI;
     public GameObject ActivateUI;
-    public GameObject Target;
     public bool isActiveCard = false;
-    public bool isActive2Card = false;
     public bool isEvolved = false;
     public bool isPikaDeck = false;
     public bool isCharDeck = false;
@@ -24,7 +22,7 @@ public class PokemonCard : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        isActiveCard = false;
+       
 
     }
 
@@ -42,6 +40,7 @@ public class PokemonCard : MonoBehaviour
         if(HP <= 0)
         {
             fainted();
+            HP = 0;
         }
     }
     public void healDamage()
@@ -50,31 +49,51 @@ public class PokemonCard : MonoBehaviour
         DamageTaken -= 30;
         
     }
-    public void setActiveCard()
-    {
-        if(isCharDeck == true)
-        {
-            transform.gameObject.tag = "Active";
-            isActiveCard = true;
-            ActivateUI.SetActive(false);
+
 
             //Example with a manager... 
             // Team number : 1 = CharDeck, 2 = PikaDeck
             // 'this' slots in to paramater of PokemonCard
             //BattleManager.instance.MakeCardActive(TeamNumber, this);
-        }
-        if(isPikaDeck == true)
-        {
-            transform.gameObject.tag = "Active2";
-            isActiveCard = true;
-            ActivateUI.SetActive(false);
-        }
-        
 
-    }
     public void makeActive()
     {
-        if(isCharDeck == true && isPikaDeck == false)
+        if (BattleManager.instance.p1ActiveCard != null || BattleManager.instance.p2ActiveCard != null)
+        {
+            if (isCharDeck == true)
+            {
+                BattleManager.instance.addBench(gameObject, 1);
+            }
+            if (isPikaDeck == true)
+            {
+                BattleManager.instance.addBench(gameObject, 2);
+            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            /*
+            if(isCharDeck == true)
+            {
+                BattleManager.instance.p1Benched[1] = gameObject;
+            }
+            if (isPikaDeck == true)
+            {
+                BattleManager.instance.p1Benched = new gameObject[];
+            }
+            */
+        }
+        if (isCharDeck == true && isPikaDeck == false)
         {
             BattleManager.instance.p1ActiveCard = gameObject;
             isActiveCard = true;
@@ -86,10 +105,7 @@ public class PokemonCard : MonoBehaviour
             isActiveCard = true;
             ActivateUI.SetActive(false);
         }
-        if(BattleManager.instance.p1ActiveCard != null)
-        {
-            Debug.Log("full");
-        }
+
     }
     public void setBenchedCard()
     {
@@ -119,13 +135,7 @@ public class PokemonCard : MonoBehaviour
     }
     public void fainted()
     {
-        if(HP <= 0)
-        {
-            isActiveCard = false;
-            
-            HP = 0;
-        }
-            
+        BattleManager.instance.clear();
         
     }
 

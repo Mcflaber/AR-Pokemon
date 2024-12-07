@@ -370,9 +370,9 @@ RectTransform:
   m_Children: []
   m_Father: {fileID: 807120382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 426, y: 107}
+  m_AnchorMin: {x: 1, y: 1}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 8, y: -101}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &28253425 stripped
@@ -393,7 +393,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &28253438
+--- !u!114 &28253442
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -642,7 +642,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -308, y: 84}
+  m_AnchoredPosition: {x: -578, y: 186}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &103655780
@@ -689,7 +689,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 240913491}
+      - m_Target: {fileID: 1917188027}
         m_TargetAssemblyTypeName: PokemonCard, Assembly-CSharp
         m_MethodName: removeEnergy
         m_Mode: 1
@@ -899,7 +899,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &124480917
+--- !u!114 &124480921
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3550,8 +3550,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   p1ActiveCard: {fileID: 0}
   p2ActiveCard: {fileID: 0}
-  p1Benched: []
-  p2Benched: []
+  p1Benched:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  p2Benched:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  test: 0000000000000000000000000000000000000000
 --- !u!4 &554034164
 Transform:
   m_ObjectHideFlags: 0
@@ -4208,7 +4219,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc0685a8690270740886974e1df3cd59, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &615667031
+--- !u!114 &615667034
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4533,9 +4544,9 @@ RectTransform:
   - {fileID: 1282053855}
   m_Father: {fileID: 807120382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305, y: -163}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: -163, y: 87}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &669466762
@@ -4581,7 +4592,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 669466763}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1917188027}
+        m_TargetAssemblyTypeName: Pikachu, Assembly-CSharp
+        m_MethodName: electroBall
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &669466763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4890,20 +4913,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db3c61895e82013429779ef95b6cc7c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1ActiveCard: {fileID: 0}
-  p2ActiveCard: {fileID: 0}
-  p1Benched:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  p2Benched:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   HP: 0
   DamageTaken: 0
   Energy: 0
@@ -4913,9 +4922,7 @@ MonoBehaviour:
   EnergyField: {fileID: 0}
   AttackUI: {fileID: 0}
   ActivateUI: {fileID: 0}
-  Target: {fileID: 0}
   isActiveCard: 0
-  isActive2Card: 0
   isEvolved: 0
   isPikaDeck: 0
   isCharDeck: 0
@@ -5555,7 +5562,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 421, y: 165}
+  m_AnchoredPosition: {x: 678, y: 282}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &761617371
@@ -6849,7 +6856,7 @@ MonoBehaviour:
   m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
-  m_ReferenceResolution: {x: 800, y: 600}
+  m_ReferenceResolution: {x: 1340, y: 800}
   m_ScreenMatchMode: 0
   m_MatchWidthOrHeight: 0
   m_PhysicalUnit: 3
@@ -6898,7 +6905,19 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &814208675
+--- !u!114 &814208676 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4854289526346325917, guid: 9e49de5d4e5c0914db9753232a2eb96d,
+    type: 3}
+  m_PrefabInstance: {fileID: 8359270404326261060}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 814208660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d113bd8cbc1420545b9a6beda16a66a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &814208679
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8308,9 +8327,9 @@ RectTransform:
   - {fileID: 1635462641}
   m_Father: {fileID: 807120382}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -305, y: -163}
+  m_AnchorMin: {x: 0.5, y: 0}
+  m_AnchorMax: {x: 0.5, y: 0}
+  m_AnchoredPosition: {x: 165, y: 88}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &899807191
@@ -8356,7 +8375,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 899807192}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1917188027}
+        m_TargetAssemblyTypeName: Pikachu, Assembly-CSharp
+        m_MethodName: quickAttack
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &899807192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8431,7 +8462,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -307, y: 180}
+  m_AnchoredPosition: {x: -577, y: 282}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &910972996
@@ -8478,7 +8509,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 240913491}
+      - m_Target: {fileID: 1917188027}
         m_TargetAssemblyTypeName: PokemonCard, Assembly-CSharp
         m_MethodName: addEnergy
         m_Mode: 1
@@ -9586,7 +9617,19 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1071530324
+--- !u!114 &1071530325 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5056200734373547620, guid: 29813be5a95c45a42a4ae4b326f2e98b,
+    type: 3}
+  m_PrefabInstance: {fileID: 1631323781762649971}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1071530309}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa9a49d6155d6124cbb5c2d9486bc495, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1071530328
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9629,7 +9672,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 8256356853957097932}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1086871206
+--- !u!114 &1086871205
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -11550,7 +11593,19 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1297539975
+--- !u!114 &1297539976 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6994570838469164095, guid: a9803a556833ce541aa348a31bd901f2,
+    type: 3}
+  m_PrefabInstance: {fileID: 3040267658454874998}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1297539960}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e761200c665c5894485e9bd485932f23, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1297539979
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12691,7 +12746,19 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1540462139
+--- !u!114 &1540462140 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4288626521413943434, guid: e3f70ac068d04054cbab4c08afda2e50,
+    type: 3}
+  m_PrefabInstance: {fileID: 1649058382075573437}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1540462124}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22cf2abca93ff554bb4f54275413f667, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1540462143
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -13804,7 +13871,7 @@ MonoBehaviour:
   m_Script: {fileID: -1631628248, guid: 8a9a760f95896c34689febc965510927, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1665344344
+--- !u!114 &1665344352
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -14150,7 +14217,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1917188027}
         m_TargetAssemblyTypeName: PokemonCard, Assembly-CSharp
-        m_MethodName: setActiveCard
+        m_MethodName: makeActive
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -14959,7 +15026,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 240913491}
-        m_TargetAssemblyTypeName: Charmander, Assembly-CSharp
+        m_TargetAssemblyTypeName: PokemonCard, Assembly-CSharp
         m_MethodName: makeActive
         m_Mode: 1
         m_Arguments:
@@ -15926,7 +15993,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1917188024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16028,20 +16095,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 91cb0420a7f7716439771b1392724410, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  p1ActiveCard: {fileID: 0}
-  p2ActiveCard: {fileID: 0}
-  p1Benched:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  p2Benched:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   HP: 0
   DamageTaken: 0
   Energy: 0
@@ -16051,9 +16104,7 @@ MonoBehaviour:
   EnergyField: {fileID: 16620495}
   AttackUI: {fileID: 807120381}
   ActivateUI: {fileID: 1232194225}
-  Target: {fileID: 0}
   isActiveCard: 0
-  isActive2Card: 0
   isEvolved: 0
   isPikaDeck: 0
   isCharDeck: 0
@@ -16805,6 +16856,16 @@ PrefabInstance:
       propertyPath: StatusFilter
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5834559187704479760, guid: 29813be5a95c45a42a4ae4b326f2e98b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1071530325}
+    - target: {fileID: 5834559187704479760, guid: 29813be5a95c45a42a4ae4b326f2e98b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: makeActive
+      objectReference: {fileID: 0}
     - target: {fileID: 7763085392029220293, guid: 29813be5a95c45a42a4ae4b326f2e98b,
         type: 3}
       propertyPath: m_Name
@@ -16813,7 +16874,7 @@ PrefabInstance:
     - target: {fileID: 7763085392029220293, guid: 29813be5a95c45a42a4ae4b326f2e98b,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7873383500281686572, guid: 29813be5a95c45a42a4ae4b326f2e98b,
         type: 3}
@@ -16828,7 +16889,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7763085392029220293, guid: 29813be5a95c45a42a4ae4b326f2e98b,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1071530324}
+      addedObject: {fileID: 1071530328}
   m_SourcePrefab: {fileID: 100100000, guid: 29813be5a95c45a42a4ae4b326f2e98b, type: 3}
 --- !u!1001 &1649058382075573437
 PrefabInstance:
@@ -16851,13 +16912,23 @@ PrefabInstance:
     - target: {fileID: 1319152520719731530, guid: e3f70ac068d04054cbab4c08afda2e50,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1901721069493735968, guid: e3f70ac068d04054cbab4c08afda2e50,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 240913491}
+    - target: {fileID: 2831302082866264458, guid: e3f70ac068d04054cbab4c08afda2e50,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1540462140}
+    - target: {fileID: 2831302082866264458, guid: e3f70ac068d04054cbab4c08afda2e50,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: makeActive
+      objectReference: {fileID: 0}
     - target: {fileID: 3870981777868193032, guid: e3f70ac068d04054cbab4c08afda2e50,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -16926,7 +16997,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 1319152520719731530, guid: e3f70ac068d04054cbab4c08afda2e50,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1540462139}
+      addedObject: {fileID: 1540462143}
   m_SourcePrefab: {fileID: 100100000, guid: e3f70ac068d04054cbab4c08afda2e50, type: 3}
 --- !u!1001 &1872538722644657858
 PrefabInstance:
@@ -17212,7 +17283,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3035400649383222751, guid: 581d94b421b89b94a8f5af736171a2f8,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 28253438}
+      addedObject: {fileID: 28253442}
   m_SourcePrefab: {fileID: 100100000, guid: 581d94b421b89b94a8f5af736171a2f8, type: 3}
 --- !u!1001 &2916148064687562088
 PrefabInstance:
@@ -17410,7 +17481,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7295887600459863275, guid: 440423d9f67ca6641b019f8f9c0c64f9,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 615667031}
+      addedObject: {fileID: 615667034}
   m_SourcePrefab: {fileID: 100100000, guid: 440423d9f67ca6641b019f8f9c0c64f9, type: 3}
 --- !u!1001 &3040267658454874998
 PrefabInstance:
@@ -17420,6 +17491,16 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 967449718928324379, guid: a9803a556833ce541aa348a31bd901f2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1297539976}
+    - target: {fileID: 967449718928324379, guid: a9803a556833ce541aa348a31bd901f2,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: makeActive
+      objectReference: {fileID: 0}
     - target: {fileID: 2459103830363203688, guid: a9803a556833ce541aa348a31bd901f2,
         type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -17443,7 +17524,7 @@ PrefabInstance:
     - target: {fileID: 5248126819455811732, guid: a9803a556833ce541aa348a31bd901f2,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6659872015030824474, guid: a9803a556833ce541aa348a31bd901f2,
         type: 3}
@@ -17508,7 +17589,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 5248126819455811732, guid: a9803a556833ce541aa348a31bd901f2,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1297539975}
+      addedObject: {fileID: 1297539979}
   m_SourcePrefab: {fileID: 100100000, guid: a9803a556833ce541aa348a31bd901f2, type: 3}
 --- !u!1001 &5701373185369058363
 PrefabInstance:
@@ -17631,7 +17712,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3026428546572407704, guid: 602da114b62427240b6c35ae16eaec29,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 124480917}
+      addedObject: {fileID: 124480921}
   m_SourcePrefab: {fileID: 100100000, guid: 602da114b62427240b6c35ae16eaec29, type: 3}
 --- !u!1001 &6620252593740146837
 PrefabInstance:
@@ -17729,7 +17810,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6340852359610937578, guid: 3241bbf5e1dcce948b1cbb7ec577dbae,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1665344344}
+      addedObject: {fileID: 1665344352}
   m_SourcePrefab: {fileID: 100100000, guid: 3241bbf5e1dcce948b1cbb7ec577dbae, type: 3}
 --- !u!1001 &8256356853957097932
 PrefabInstance:
@@ -17778,6 +17859,11 @@ PrefabInstance:
         type: 3}
       propertyPath: isActiveCard
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 942248941488015557, guid: b2b86d47e45f7dc4888a01900a3c53ec,
+        type: 3}
+      propertyPath: p2ActiveCard
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 3144233222176814293, guid: b2b86d47e45f7dc4888a01900a3c53ec,
         type: 3}
@@ -17894,6 +17980,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8747066746952103069, guid: b2b86d47e45f7dc4888a01900a3c53ec,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: tempAttack
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 387172876914118408, guid: b2b86d47e45f7dc4888a01900a3c53ec, type: 3}
     m_RemovedGameObjects: []
@@ -17906,7 +17997,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 212066894212049432, guid: b2b86d47e45f7dc4888a01900a3c53ec,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1086871206}
+      addedObject: {fileID: 1086871205}
   m_SourcePrefab: {fileID: 100100000, guid: b2b86d47e45f7dc4888a01900a3c53ec, type: 3}
 --- !u!1001 &8359270404326261060
 PrefabInstance:
@@ -17939,7 +18030,7 @@ PrefabInstance:
     - target: {fileID: 6101880028867312353, guid: 9e49de5d4e5c0914db9753232a2eb96d,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6879753526935143369, guid: 9e49de5d4e5c0914db9753232a2eb96d,
         type: 3}
@@ -17996,6 +18087,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8869746497301115861, guid: 9e49de5d4e5c0914db9753232a2eb96d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 814208676}
+    - target: {fileID: 8869746497301115861, guid: 9e49de5d4e5c0914db9753232a2eb96d,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: makeActive
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8608176482078477387, guid: 9e49de5d4e5c0914db9753232a2eb96d, type: 3}
     m_RemovedGameObjects: []
@@ -18004,7 +18105,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6101880028867312353, guid: 9e49de5d4e5c0914db9753232a2eb96d,
         type: 3}
       insertIndex: -1
-      addedObject: {fileID: 814208675}
+      addedObject: {fileID: 814208679}
   m_SourcePrefab: {fileID: 100100000, guid: 9e49de5d4e5c0914db9753232a2eb96d, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

@@ -25,19 +25,13 @@ public class Charmeleon : Charmander
         {
             showHud();
         }
-        Target = GameObject.FindGameObjectWithTag("Active2");
         fainted();
-        gameObject.tag = basic.tag;
     }
     public void Slash()
     {
-        if (Energy >= 1)
+        if (Energy >= 2)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(30);
-            }
+            BattleManager.instance.doDamage(30, 1);
 
 
         }
@@ -46,11 +40,7 @@ public class Charmeleon : Charmander
     {
         if (Energy >= 3)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(80);
-            }
+            BattleManager.instance.doDamage(60, 1);
 
 
         }

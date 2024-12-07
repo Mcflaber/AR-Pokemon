@@ -27,7 +27,6 @@ public class Charmander : PokemonCard
         {
             showHud();
         }
-        Target = GameObject.FindGameObjectWithTag("Active2");
         fainted();
     }
     public void scratch()
@@ -35,11 +34,7 @@ public class Charmander : PokemonCard
 
         if (Energy >= 1)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(10);
-            }
+            BattleManager.instance.doDamage(10, 1);
 
 
         }
@@ -50,18 +45,8 @@ public class Charmander : PokemonCard
         AttackDamage = 20;
         if (Energy >= 2)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(20);
-            }
+            BattleManager.instance.doDamage(20, 1);
         }
     }
-    public void tempAttack()
-    {
-        if (Energy >= 1)
-        {
-            BattleManager.instance.doDamagetoP1(10);
-        }
-    }
+
 }

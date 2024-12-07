@@ -30,13 +30,7 @@ public class Moltres : PokemonCard
 
         if (Energy >= 1)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(30);
-            }
-
-
+            BattleManager.instance.doDamage(30, 1);
         }
 
     }
@@ -45,11 +39,7 @@ public class Moltres : PokemonCard
         AttackDamage = 20;
         if (Energy >= 3)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(90);
-            }
+            BattleManager.instance.doDamage(90, 1);
         }
     }
 }

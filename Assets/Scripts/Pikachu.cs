@@ -8,6 +8,7 @@ public class Pikachu : PokemonCard
         HP = 70;
         Energy = 0;
         isPikaDeck = true;
+        isCharDeck = false;
     }
 
     // Update is called once per frame
@@ -23,7 +24,6 @@ public class Pikachu : PokemonCard
         {
             showHud();
         }
-        Target = GameObject.FindGameObjectWithTag("Active");
         fainted();
     }
 
@@ -31,14 +31,14 @@ public class Pikachu : PokemonCard
     {
         if (Energy >= 1)
         {
-            BattleManager.instance.doDamagetoP1(10);
+            BattleManager.instance.doDamage(10, 2);
         }
     }
     public void electroBall()
     {
         if (Energy >= 3)
         {
-            BattleManager.instance.doDamagetoP1(60);
+            BattleManager.instance.doDamage(60, 2);
         }
     }
 

@@ -29,22 +29,14 @@ public class Salandit : PokemonCard
     {
         if (Energy >= 1)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(10);
-            }
+            BattleManager.instance.doDamage(10, 1);
         }
     }
     public void Combustion()
     {
         if (Energy >= 2)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(30);
-            }
+            BattleManager.instance.doDamage(30, 1);
         }
     }
 }

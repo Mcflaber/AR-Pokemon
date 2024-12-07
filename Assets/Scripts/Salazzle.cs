@@ -30,13 +30,7 @@ public class Salazzle : Salandit
 
         if (Energy >= 2)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(70);
-            }
-
-
+            BattleManager.instance.doDamage(70, 1);
         }
 
     }

@@ -24,32 +24,21 @@ public class EXcharizard : Charmeleon
         {
             showHud();
         }
-        Target = GameObject.FindGameObjectWithTag("Active2");
+
         fainted();
     }
     public void Flamethrower()
     {
         if (Energy >= 4)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(140);
-            }
-
-
+            BattleManager.instance.doDamage(140, 1);
         }
     }
     public void FieryBlast()
     {
-        if (Energy >= 3)
+        if (Energy >= 4)
         {
-            PokemonCard pc = Target.GetComponent<PokemonCard>();
-            if (pc != null)
-            {
-                pc.takeDamage(300);
-            }
-            Energy--;
+            BattleManager.instance.doDamage(300, 1);
 
         }
     }
