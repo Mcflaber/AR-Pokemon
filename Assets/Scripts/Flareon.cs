@@ -7,8 +7,10 @@ public class Flareon : Eevee
     {
         HP = 110;
         Energy = 0;
-        isEvolved = true;
+        stage = 0;
         isCharDeck = true;
+        ActivateUI.SetActive(false);
+        AttackUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,14 +18,6 @@ public class Flareon : Eevee
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
-        if (isActiveCard == false)
-        {
-            hideHud();
-        }
-        else
-        {
-            showHud();
-        }
         fainted();
     }
     public void Bite()

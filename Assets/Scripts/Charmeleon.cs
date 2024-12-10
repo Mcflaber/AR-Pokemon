@@ -1,15 +1,18 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
-public class Charmeleon : Charmander
+public class Charmeleon : PokemonCard
 {
-    public GameObject basic;
+    public GameObject Charmander;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        HP = 100 - DamageTaken;
-        Energy = 0;
-        isEvolved = true;
+        Charmander pc = GetComponent<Charmander>();
+        stage = 0;
         isCharDeck = true;
+        ActivateUI.SetActive(false);
+        AttackUI.SetActive(false);
+        
     }
 
     // Update is called once per frame
@@ -17,15 +20,12 @@ public class Charmeleon : Charmander
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
-        if (isActiveCard == false)
+        if (BattleManager.instance.p1ActiveCard == null)
         {
-            hideHud();
-        }
-        else
-        {
-            showHud();
+            ActivateUI.SetActive(true);
         }
         fainted();
+        getStats();
     }
     public void Slash()
     {
@@ -44,5 +44,11 @@ public class Charmeleon : Charmander
 
 
         }
+    }
+    public void getStats()
+    {
+        Charmander pc = GetComponent<Charmander>();
+        HP = 100 - pc.DamageTaken;
+        Energy = pc.Energy;
     }
 }

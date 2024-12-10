@@ -7,8 +7,10 @@ public class Salazzle : Salandit
     {
         HP = 100;
         Energy = 0;
-        isEvolved = true;
+        stage = 0;
         isCharDeck = true;
+        ActivateUI.SetActive(false);
+        AttackUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,14 +18,7 @@ public class Salazzle : Salandit
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
-        if (isActiveCard == false)
-        {
-            hideHud();
-        }
-        else
-        {
-            showHud();
-        }
+        fainted();
     }
     public void FireClaws()
     {

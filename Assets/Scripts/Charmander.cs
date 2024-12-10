@@ -3,14 +3,18 @@ using UnityEngine;
 
 public class Charmander : PokemonCard
 {
-
+    public GameObject charmeleon;
+    public static Charmander instance;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         HP = 70;
         Energy = 0;
         isCharDeck = true;
-
+        stage = 0;
+        ActivateUI.SetActive(false);
+        AttackUI.SetActive(false);
+        instance = this;
     }
 
     // Update is called once per frame
@@ -18,15 +22,11 @@ public class Charmander : PokemonCard
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
+        if(BattleManager.instance.p1ActiveCard == null )
+        {
+            ActivateUI.SetActive(true);
+        }
 
-        if (isActiveCard == false)
-        {
-            hideHud();
-        }
-        else
-        {
-            showHud();
-        }
         fainted();
     }
     public void scratch()
@@ -48,5 +48,19 @@ public class Charmander : PokemonCard
             BattleManager.instance.doDamage(20, 1);
         }
     }
-
+    public void evolve()
+    {
+        Charmeleon stage2 = charmeleon.GetComponent<Charmeleon>();
+        if (isActiveCard == true)
+        {
+            BattleManager.instance.activarte(charmeleon, 1);
+            stage2.isActiveCard = true;
+            
+        }
+        if (inPlay == true && isActiveCard == false)
+        {
+            BattleManager.instance.subBench(gameObject, 1);
+            BattleManager.instance.addBench(charmeleon, 1);
+        }
+    }
 }

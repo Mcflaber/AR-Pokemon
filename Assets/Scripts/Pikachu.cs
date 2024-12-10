@@ -7,8 +7,10 @@ public class Pikachu : PokemonCard
     {
         HP = 70;
         Energy = 0;
+        stage = 0;
         isPikaDeck = true;
-        isCharDeck = false;
+        ActivateUI.SetActive(false);
+        AttackUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,14 +18,7 @@ public class Pikachu : PokemonCard
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
-        if (isActiveCard == false)
-        {
-            hideHud();
-        }
-        else
-        {
-            showHud();
-        }
+
         fainted();
     }
 

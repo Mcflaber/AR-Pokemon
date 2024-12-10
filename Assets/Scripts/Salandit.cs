@@ -7,8 +7,10 @@ public class Salandit : PokemonCard
     {
         HP = 70;
         Energy = 0;
-        isEvolved = false;
+        stage = 0;
         isCharDeck = true;
+        ActivateUI.SetActive(false);
+        AttackUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,14 +18,7 @@ public class Salandit : PokemonCard
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
-        if (isActiveCard == false)
-        {
-            hideHud();
-        }
-        else
-        {
-            showHud();
-        }
+        fainted();
     }
     public void liveCoal()
     {

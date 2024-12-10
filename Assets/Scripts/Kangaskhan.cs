@@ -7,8 +7,10 @@ public class Kangaskhan : PokemonCard
     {
         HP = 120;
         Energy = 0;
-        isEvolved = false;
+        stage = 0;
         isCharDeck = true;
+        ActivateUI.SetActive(false);
+        AttackUI.SetActive(false);
     }
 
     // Update is called once per frame
@@ -16,14 +18,7 @@ public class Kangaskhan : PokemonCard
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
-        if (isActiveCard == false)
-        {
-            hideHud();
-        }
-        else
-        {
-            showHud();
-        }
+        fainted();
     }
     public void Fetch()
     {
@@ -48,7 +43,16 @@ public class Kangaskhan : PokemonCard
     {
         if(Energy >=3)
         {
-            BattleManager.instance.doDamage(60, 1);
+            flipCoint();
+            if(isHeads==true)
+            {
+                BattleManager.instance.doDamage(90, 1);
+            }
+            if(isHeads==false)
+            {
+                BattleManager.instance.doDamage(60, 1);
+            }
+            
         }
     }
 }
