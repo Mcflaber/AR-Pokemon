@@ -22,7 +22,7 @@ public class Charmeleon : PokemonCard
         EnergyField.text = Energy.ToString();
         if (BattleManager.instance.p1ActiveCard == null)
         {
-            ActivateUI.SetActive(true);
+            AttackUI.SetActive(false);
         }
         fainted();
         getStats();

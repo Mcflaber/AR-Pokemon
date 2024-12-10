@@ -27,7 +27,7 @@ public class BattleManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      
+
     }
     public void doDamage(int AttackDamage, int team)
     {
@@ -52,11 +52,14 @@ public class BattleManager : MonoBehaviour
         PokemonCard P2 = p2ActiveCard.GetComponent<PokemonCard>();
         if (P1.HP <= 0)
         {
+
             p1ActiveCard = null;
+            
             
         }
         if (P2.HP <= 0)
         {
+
             p2ActiveCard = null;
         }
 

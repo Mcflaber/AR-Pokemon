@@ -18,7 +18,10 @@ public class Raichu : PokemonCard
     {
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
-
+        if (HP <= 0)
+        {
+            AttackUI.SetActive(false);
+        }
         fainted();
     }
 

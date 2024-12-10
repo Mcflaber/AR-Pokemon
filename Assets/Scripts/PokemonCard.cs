@@ -50,10 +50,11 @@ public class PokemonCard : MonoBehaviour
     }
     private void OnMouseDown()
     {
-        if(isActiveCard == false && inPlay == false)
+        if(isActiveCard == false)
         {
-            makeActive();
             EnergyUI.SetActive(true);
+            makeActive();
+
         }
         if(isBenched== true)
         {
@@ -89,7 +90,7 @@ public class PokemonCard : MonoBehaviour
     {
         if (BattleManager.instance.p1ActiveCard == null)
         {
-            if (isCharDeck == true && isPikaDeck == false && stage == 0)
+            if (isCharDeck == true && isPikaDeck == false)
             {
                 BattleManager.instance.p1ActiveCard = gameObject;
                 inPlay = true;
@@ -100,7 +101,7 @@ public class PokemonCard : MonoBehaviour
         }
         if (BattleManager.instance.p2ActiveCard == null)
         {
-            if (isPikaDeck == true && isCharDeck == false && stage == 0)
+            if (isPikaDeck == true && isCharDeck == false)
             {
                 BattleManager.instance.p2ActiveCard = gameObject;
                 inPlay = true;
@@ -167,14 +168,19 @@ public class PokemonCard : MonoBehaviour
     public void fainted()
     {
         BattleManager.instance.clear();
-
+        ActivateUI.SetActive(false);
+isActiveCard = false;
         if (isCharDeck == true && isGx == true && HP <= 0)
         {
             BattleManager.instance.p1FaintedPokemon += 2;
+            AttackUI.SetActive(false);
+            EnergyUI.SetActive(false);
         }
         if (isPikaDeck == true && isGx == true && HP <= 0)
         {
             BattleManager.instance.p2FaintedPokemon += 2;
+            AttackUI.SetActive(false);
+            ActivateUI.SetActive(false);
         }
     }
     public void flipCoint()

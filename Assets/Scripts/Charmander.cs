@@ -24,9 +24,12 @@ public class Charmander : PokemonCard
         EnergyField.text = Energy.ToString();
         if(BattleManager.instance.p1ActiveCard == null )
         {
-            ActivateUI.SetActive(true);
+            
         }
-
+        if(HP <= 0)
+        {
+            AttackUI.SetActive(false);
+        }
         fainted();
     }
     public void scratch()

@@ -19,6 +19,10 @@ public class Salandit : PokemonCard
         HPField.text = HP.ToString();
         EnergyField.text = Energy.ToString();
         fainted();
+        if (HP <= 0)
+        {
+            ActivateUI.SetActive(false);
+        }
     }
     public void liveCoal()
     {
